@@ -439,7 +439,7 @@ body {
 }
 
 
-.sidebarCopy{
+.sidebarCopy {
     grid-column-start: 2;
     grid-column-end: 3;
     display: flex;
@@ -447,7 +447,7 @@ body {
     align-items: flex-end;
 }
 
-.sidebarSVG{
+.sidebarSVG {
     display: flex;
     flex-direction: row-reverse;
 }
@@ -464,4 +464,51 @@ body {
 .content {
     background-color: greenyellow;
     grid-area: 2/2/6/5;
+}
+
+#headerContainer {
+    display: grid;
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 1/1/3/6;
+    gap: 5px;
+}
+
+#userIntro{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#searchBar {
+    margin-left: 1%;
+    height: 24px;
+    width: 45%;
+    border-width: .5px;
+    border-radius: 15px;
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 1/1/2/4;
+}
+
+#buttonsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-row-end: 6;
+    align-items: center;
+}
+
+.buttons{
+    display: flex; 
+    width: 4em;
+    height: 2em;
+    background-color: white;
+    border-width: .5px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
 }
