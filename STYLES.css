@@ -470,51 +470,54 @@ body {
 
 #headerContainer {
     display: grid;
-    /**Row start/Col Start/Row End/Col End**/
-    grid-area: 1/1/6/6;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
-#userIntro{
+#searchContainer {
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 1/1/2/4;
+
+}
+
+#searchContainer>input {
+    padding-left: 1%;
+    margin-left: 2%;
+    height: 24px;
+    width: 60%;
+    border-width: .5px;
+    border-radius: 15px;
+}
+
+#userIntroTop {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-#searchBar {
-    padding-left: 1%;
-    margin-left: 2%;
-    height: 24px;
-    width: 75%;
-    border-width: .5px;
-    border-radius: 15px;
-    /**Row start/Col Start/Row End/Col End**/
-    grid-area: 1/1/2/4;
-}
-
-#buttonsContainer{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 1px solid black;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 4;
-    grid-row-end: 6;
-    align-items: center;
-}
-
-#userInfo{
-    display: flex;
-    justify-content: space-evenly;
-    border: 1px solid black; 
+#userIntroBottom {
+    font-size: x-large;
     grid-row-start: 4;
-    grid-row-end: 6;
-    grid-column-start: 4;
-    grid-row-end: 6;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column-reverse;
 }
-.buttons{
-    display: flex; 
+
+
+#buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 3/4/5/5;
+}
+
+
+.buttons {
+    display: flex;
     width: 4em;
     height: 2em;
     background-color: white;
@@ -522,4 +525,12 @@ body {
     border-radius: 15px;
     align-items: center;
     justify-content: center;
+}
+
+#userInfo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 1/4/3/5;
 }
