@@ -439,7 +439,6 @@ body {
     /**Row start/Col Start/Row End/Col End**/
 }
 
-
 .sidebarCopy {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -461,11 +460,6 @@ body {
 .header {
     background-color: blue;
     grid-area: 1/2/2/5;
-}
-
-.content {
-    background-color: greenyellow;
-    grid-area: 2/2/6/5;
 }
 
 #headerContainer {
@@ -506,25 +500,29 @@ body {
     flex-direction: column-reverse;
 }
 
-
 #buttonsContainer {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
     /**Row start/Col Start/Row End/Col End**/
-    grid-area: 3/4/5/5;
+    grid-area: 4/4/5/5;
+    height: 100%;
 }
 
 
 .buttons {
     display: flex;
-    width: 4em;
-    height: 2em;
+    width: 6rem;
+    height: 2rem;
     background-color: white;
     border-width: .5px;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
+}
+
+.buttons:hover {
+    cursor: pointer;
 }
 
 #userInfo {
@@ -533,4 +531,85 @@ body {
     align-items: center;
     /**Row start/Col Start/Row End/Col End**/
     grid-area: 1/4/3/5;
+}
+
+#userInfo:hover {
+    cursor: pointer;
+}
+
+#content {
+    grid-area: 2/2/6/5;
+    /* This div's styling starts here, above is the styling that applies to the grid IT is in */
+    background-color: greenyellow;
+    display: grid;
+    grid-template-rows: 4rem repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#projectsDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 2/1/5/4;
+    border: 1px solid black;
+    gap: 10px;
+}
+
+.contentLabels{
+    font-size: large;
+    font-weight: bold;
+}
+
+#projectsLabel {
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 1/1/2/4;
+    border: 1px solid black; 
+    display: flex;
+    align-items: flex-end;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#projectsDiv>div {
+    border: 1px solid white;
+    border-radius: 15px;;
+}
+
+.projectTitles {
+    font-weight: bolder;
+    font-size: larger;
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 1/1/2/3;
+    align-self: center;
+}
+
+.projectCopy {
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 2/1/3/4;
+}
+
+.projects>span {
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 3/1/4/4;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
+#announcementsLabel {
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 1/4/2/5;
+}
+
+#trendingLabel {
+    /**Row start/Col Start/Row End/Col End**/
+    grid-area: 3/4/5/5;
+}
+
+svg:hover{
+    cursor: pointer;
 }
